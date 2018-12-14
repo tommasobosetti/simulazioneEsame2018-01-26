@@ -30,7 +30,7 @@ function check(url, invocationParameters,  expectedResultData, expectedResultSta
     })
     .then((json) => {
         checkResult.resultData = json;
-        checkResult.resultDataAsExpected = compareResults(checkResult.resultData, expectedResultData);
+        checkResult.resultDataAsExpected = compareResults(expectedResultData, checkResult.resultData);
 
         return checkResult;
     })
